@@ -1,12 +1,12 @@
-import Header from "../components/layout/Header";
+import Hero from "../components/sections/Hero";
+import ServicesSection from "../components/sections/ServicesSection";
 
 const Home = () => {
   return (
     <>
-        <Header />
-        <h1>Home Page</h1>
+      <Hero />
+      <ServicesSection />
     </>
   );
 };
-
 export default Home;
