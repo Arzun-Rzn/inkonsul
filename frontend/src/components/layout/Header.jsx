@@ -68,8 +68,10 @@ const Header = () => {
     <header className="header">
       <div className="header-container">
 
-
-        <div className="logo">INKONSUL</div>
+        <Link to="/" className="brand">
+          <img src="/logo.png" alt="Inkonsul Logo" className="brand-logo" />
+          <span className="brand-text">INKONSUL</span>
+        </Link>
 
         <nav className="nav">
           {navItems.map((item, index) => (

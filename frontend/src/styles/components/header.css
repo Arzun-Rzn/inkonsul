@@ -12,16 +12,44 @@
 .header-container {
   max-width: 1200px;
   margin: auto;
-  padding: 15px 20px;
+  padding: 15px 0px;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.logo {
-  font-weight: bold;
-  font-size: 20px;
+/* Brand container */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  text-decoration: none;
+  color: #000;
+
+  transition: all 0.25s ease;
+}
+
+/* Logo image */
+.brand-logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+/* Text */
+.brand-text {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color:#000475 ;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Hover */
+.brand:hover {
+  opacity: 0.95;
 }
 
 /* ================= NAV ================= */
@@ -57,7 +85,7 @@
 
 .nav-item:hover {
   transform: scale(1.05);
-  color: #0f5bff;
+  color: #0048fe;
 }
 
 .nav-item:hover .arrow {
@@ -73,7 +101,7 @@
   left: 50%;
   transform: translateX(-40%);
 
-  background: #1f3c88;
+  background: #0a2e8b;
   color: white;
 
   padding: 32px 0;
@@ -154,9 +182,10 @@
 }
 
 .login {
-  font-size: 16px;
+  font-size: 15px;
   cursor: pointer;
-  padding: 6px 12px;
+  padding: 8px 14px;
+  background-color: #c3c3c3;
   border-radius: 42px;
   transition: all 0.25s ease;
 }
@@ -183,8 +212,8 @@
 }
 
 .signup-btn:hover {
-  background-color: #c3c3c3;
-  color: #000;
+  background-color: #0048fe;
+  color: #ffffff;
   transform: scale(1.1);
 }
 
