@@ -6,27 +6,27 @@ const services = [
   {
     title: "Product Development",
     desc: "Build scalable, high-performance digital products tailored to your business.",
-    img: "/images/service1.jpg",
+    img: "/images/service1.png",
   },
   {
     title: "HR Management Systems",
     desc: "Streamline HR operations with intelligent and automated solutions.",
-    img: "/images/service2.jpg",
+    img: "/images/service2.png",
   },
   {
     title: "AI & Analytics",
     desc: "Leverage data and AI to drive smarter business decisions.",
-    img: "/images/service3.jpg",
+    img: "/images/service3.png",
   },
   {
     title: "Cloud & Infrastructure",
     desc: "Deploy secure, scalable cloud systems for modern businesses.",
-    img: "/images/service4.jpg",
+    img: "/images/service4.png",
   },
   {
     title: "Enterprise Solutions",
     desc: "Custom enterprise software to optimize workflows and growth.",
-    img: "/images/service5.jpg",
+    img: "/images/service5.png",
   },
 ];
 

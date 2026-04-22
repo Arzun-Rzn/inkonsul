@@ -143,7 +143,7 @@
   border-radius: 50%;
   border: none;
 
-  background: rgba(101, 101, 101, 0.6);
+  background: rgb(35, 35, 35);
   color: #fff;
 
   font-size: 20px;
@@ -159,8 +159,8 @@
 }
 
 .scroll-btn:hover {
-  background: #c6c6c6;
-  color:#000000;
+  background: #505050;
+  color:#ffffff;
   transform: translateY(-50%) scale(1.1);
 }
 

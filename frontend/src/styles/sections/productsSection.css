@@ -20,7 +20,7 @@
 }
 
 .products-header h2 {
-  font-size: 38px;
+  font-size: 48px;
   font-weight: 500;
   margin-bottom: 15px;
 }
@@ -83,7 +83,7 @@
 }
 
 .product-tag {
-  font-size: 12px;
+  font-size: 14px;
   color: #3b82f6;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -91,6 +91,7 @@
 
 .product-content h3 {
   font-size: 26px;
+  color: #ffffff;
   margin: 10px 0;
 }
 

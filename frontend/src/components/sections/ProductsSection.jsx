@@ -1,18 +1,20 @@
 import "../../styles/sections/productsSection.css";
 import { FaArrowRight } from "react-icons/fa";
+import sieraImg from "../../assets/images/siera.png";
+import crawaynImg from "../../assets/images/crawayn.png";
 
 const products = [
   {
     name: "Siera HR",
     desc: "An AI-powered HRMS platform designed to streamline recruitment, payroll, compliance, and workforce analytics.",
     tag: "HR Management Platform",
-    img: "/images/siera.jpg",
+    img: sieraImg,
   },
   {
     name: "Crawayn",
     desc: "A next-generation AI platform focused on training, skill development, and product innovation for modern teams.",
     tag: "Training & Development Platform",
-    img: "/images/crawayn.jpg",
+    img:  crawaynImg,
   },
 ];
 
