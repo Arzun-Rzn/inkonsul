@@ -1,41 +1,90 @@
+import { useRef } from "react";
 import "../../styles/sections/servicesSection.css";
+import { FaArrowRight } from "react-icons/fa";
 
 const services = [
   {
-    title: "HR Management Systems",
-    desc: "End-to-end HRMS solutions to manage workforce efficiently.",
+    title: "Product Development",
+    desc: "Build scalable, high-performance digital products tailored to your business.",
+    img: "/images/service1.jpg",
   },
   {
-    title: "Product Development",
-    desc: "Scalable and modern web & software product development.",
+    title: "HR Management Systems",
+    desc: "Streamline HR operations with intelligent and automated solutions.",
+    img: "/images/service2.jpg",
   },
   {
     title: "AI & Analytics",
-    desc: "Data-driven insights and intelligent automation solutions.",
+    desc: "Leverage data and AI to drive smarter business decisions.",
+    img: "/images/service3.jpg",
   },
   {
-    title: "Training Programs",
-    desc: "Industry-focused training for individuals and organizations.",
+    title: "Cloud & Infrastructure",
+    desc: "Deploy secure, scalable cloud systems for modern businesses.",
+    img: "/images/service4.jpg",
+  },
+  {
+    title: "Enterprise Solutions",
+    desc: "Custom enterprise software to optimize workflows and growth.",
+    img: "/images/service5.jpg",
   },
 ];
 
 const ServicesSection = () => {
+  const sliderRef = useRef(null);
+
+  const scrollLeft = () => {
+    sliderRef.current.scrollBy({
+      left: -350,
+      behavior: "smooth",
+    });
+  };
+
+  const scrollRight = () => {
+    sliderRef.current.scrollBy({
+      left: 350,
+      behavior: "smooth",
+    });
+  };
+
   return (
-    <section className="services">
-      <div className="services-container">
+    <section className="services-section">
+      <div className="services-header">
+        <h2>Cutting edge solutions to power up your business</h2>
+      </div>
 
-        <h2 className="services-title">Our Services</h2>
+      <div className="services-wrapper">
 
-        <div className="services-grid">
-          {services.map((item, index) => (
-            <div className="service-card" key={index}>
-              <div className="card-content">
-                <h3>{item.title}</h3>
-                <p>{item.desc}</p>
+        <button className="scroll-btn left" onClick={scrollLeft}>
+          &#10094;
+        </button>
+
+        <div className="services-slider" ref={sliderRef}>
+          <div className="services-track">
+            {services.map((item, index) => (
+              <div className="service-card" key={index}>
+                
+                <div className="card-image">
+                  <img src={item.img} alt={item.title} />
+                </div>
+
+                <div className="card-content">
+                  <h3>{item.title}</h3>
+                  <p>{item.desc}</p>
+
+                  <div className="arrow">
+                    <FaArrowRight />
+                  </div>
+                </div>
+
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
+
+        <button className="scroll-btn right" onClick={scrollRight}>
+          &#10095;
+        </button>
 
       </div>
     </section>
