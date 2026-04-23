@@ -50,7 +50,7 @@ const ServicesSection = () => {
   return (
     <section className="services-section">
       <div className="services-header">
-        <h2>Cutting edge solutions to power up your business</h2>
+        <h2>Services we provide</h2>
       </div>
 
       <div className="services-wrapper">

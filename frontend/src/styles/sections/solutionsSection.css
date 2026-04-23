@@ -1,0 +1,134 @@
+
+/* Section */
+.solutions-section {
+  padding: 60px 40px;
+  background: #ffffff;
+  color: #000000;
+}
+
+/* Header */
+.solutions-header {
+  margin-left: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.solutions-header h2 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+/* Wrapper */
+.solutions-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+/* Track (NOW GRID instead of slider) */
+.solutions-track {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* Card */
+.solutions-card {
+  height: 420px;
+  display: flex;
+  flex-direction: column;
+
+  background: #000000;
+  border-radius: 18px;
+  overflow: hidden;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.solutions-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+/* Image section (top half) */
+.solutions-card .card-image {
+  height: 55%;
+  width: 100%;
+}
+
+.solutions-card .card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Content section (bottom half) */
+.solutions-card .card-content {
+  height: 45%;
+  padding: 18px 20px;
+  position: relative;
+  background: #000000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Title */
+.solutions-card .card-content h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-top: 8px;
+  color: #ffffff;
+}
+
+/* Description */
+.solutions-card .card-content p {
+  font-size: 0.9rem;
+  color: #ffffff;
+  margin-bottom: 80px;
+  line-height: 1.4;
+}
+
+/* Arrow */
+.solutions-card .arrow {
+  position: absolute;
+  bottom: 26px;
+  right: 26px;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: #0ea5e9;
+  transition: transform 0.3s ease;
+}
+
+.solutions-card:hover .arrow{
+  transform: translateX(5px);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .solutions-track {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .solutions-track {
+    grid-template-columns: 1fr;
+  }
+
+  .solutions-section {
+    padding: 40px 20px;
+  }
+}
