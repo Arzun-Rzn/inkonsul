@@ -14,7 +14,12 @@ const Footer = () => {
 
         {/* LEFT - Brand */}
         <div className="footer-brand">
-          <h2>INKONSUL</h2>
+          <div className="footer-brand-header">
+            <img src="/logo.png" alt="Inkonsul Logo" className="brand-logo" />
+            <h2>INKONSUL</h2>
+          </div>
+
+
           <p>
             Building intelligent HR platforms and digital solutions
             for modern businesses.
