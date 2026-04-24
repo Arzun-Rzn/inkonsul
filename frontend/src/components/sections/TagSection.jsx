@@ -5,9 +5,9 @@ const TagSection = () => {
     <section className="tag-section">
       <div className="tag-container">
         <h2 className="tag-heading">
-            <span>Identify</span>
-            <span>Integrate</span>
-            <span>Implement</span>
+            <span>IDENTIFY</span>
+            <span>INTEGRATE</span>
+            <span>IMPLEMENT</span>
         </h2>
 
         <p className="tag-subtext">
