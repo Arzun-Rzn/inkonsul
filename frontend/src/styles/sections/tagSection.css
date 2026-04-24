@@ -1,0 +1,37 @@
+/* ================= TAG SECTION ================= */
+
+.tag-section {
+  width: 100%;
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #000000; 
+  color: #fff;
+}
+
+.tag-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Heading */
+.tag-heading {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.tag-heading span {
+  display: inline-block; 
+}
+
+/* Subtext */
+.tag-subtext {
+  font-size: 26px;
+  color: #ffffff;
+  font-weight: 400;
+  margin-top: 40px;
+}
