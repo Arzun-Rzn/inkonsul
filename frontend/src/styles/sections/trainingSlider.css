@@ -1,0 +1,167 @@
+.training-slider {
+  background-size: 105%;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 90vh;
+}
+
+.training-slider-cards-wrapper {
+  width: 100%;
+  max-width: 620px;
+  position: relative;
+}
+
+/* Swiper container */
+.training-swiper {
+  width: 100%;
+  padding-top: 40px;
+  padding-bottom: 60px;
+}
+
+/* Each slide */
+.training-swiper-slide {
+  width: 280px;
+  display: flex;
+  justify-content: center;
+}
+
+.training-slider-overlay {
+  min-height: calc(100vh - 20px);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 6%;
+  position: relative;
+}
+
+.training-left-content-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.training-left-content {
+  max-width: 580px;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.training-label {
+  font-size: 16px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  opacity: 0.8;
+  margin-bottom: 14px;
+}
+
+.training-title {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.05;
+  margin-bottom: 18px;
+}
+
+.training-subtitle {
+  font-size: 16px;
+  line-height: 1.8;
+  opacity: 0.85;
+  margin-bottom: 28px;
+  max-width: 520px;
+}
+
+.explore-button {
+  width: fit-content;
+  padding: 14px 32px;
+  border-radius: 14px;
+  border: 1px solid rgb(0, 0, 0);
+
+  background: rgb(198, 255, 53);
+  color: rgb(0, 0, 0);
+
+  font-weight: 600;
+  font-size: 18px;
+
+  backdrop-filter: blur(10px);
+
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.explore-button:hover {
+  transform: translateY(-2px) scale(1.1);;
+  background: #60c2ff;
+}
+
+.training-right-content {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  height: 100%;
+}
+
+.training-slider-cards-wrapper {
+  width: 380px;
+  transform: translateY(80px);
+}
+
+.training-swiper-slide {
+  width: 200px !important;
+}
+
+/* Card */
+.training-card {
+  width: 160px;
+  height: 240px;
+  border-radius: 28px;
+  overflow: hidden;
+  position: relative;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+}
+
+.training-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Overlay */
+.training-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.85),
+    rgba(0, 0, 0, 0.1)
+  );
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+}
+
+.training-card-overlay h3 {
+  color: #fff;
+  font-size: 18px;
+  margin: 0;
+}
+
+/* Swiper navigation buttons */
+.swiper-button-prev,
+.swiper-button-next {
+  color: white;
+}
+
+/* Pagination dots */
+.swiper-pagination-bullet {
+  background: rgba(255, 255, 255, 0.4);
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background: #fff;
+}
