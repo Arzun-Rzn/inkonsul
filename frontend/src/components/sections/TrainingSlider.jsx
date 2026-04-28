@@ -1,12 +1,10 @@
-
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCoverflow, Autoplay, Pagination, Navigation } from "swiper/modules";
+import { EffectCoverflow, Autoplay, Pagination } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
-import "swiper/css/navigation";
 
 import "../../styles/sections/trainingSlider.css";
 
@@ -57,11 +55,9 @@ function TrainingSlider() {
   return (
     <section
       className="training-slider"
-      
       style={{
         backgroundImage: `linear-gradient(to right, rgba(0,0,0,0.85), rgba(0,0,0,0.35)), url(${activeSlide.image})`,
       }}
-      
     >
       <div className="training-slider-overlay">
         {/* LEFT CONTENT */}
@@ -69,9 +65,11 @@ function TrainingSlider() {
           <div className="training-left-content">
             <p className="training-label">Training Academy</p>
 
-            <h1 className="training-title">{activeSlide.title}</h1>
+            <div key={activeSlide.id} className="training-text-animate">
+              <h1 className="training-title">{activeSlide.title}</h1>
 
-            <p className="training-subtitle">{activeSlide.subtitle}</p>
+              <p className="training-subtitle">{activeSlide.subtitle}</p>
+            </div>
 
             <button
               className="explore-button"
@@ -81,31 +79,35 @@ function TrainingSlider() {
             </button>
           </div>
         </div>
+
         {/* RIGHT SLIDER */}
         <div className="training-right-content">
           <div className="training-slider-cards-wrapper">
             <Swiper
-              modules={[EffectCoverflow, Autoplay, Pagination, Navigation]}
+              modules={[EffectCoverflow, Autoplay, Pagination]}
               effect="coverflow"
               grabCursor={true}
-              centeredSlides={true}
-              slidesPerView="auto"
+              centeredSlides={false}
+              slidesPerView={"auto"}
+              spaceBetween={4}
               loop={true}
+              allowTouchMove={true}
+              slideToClickedSlide={false}
               autoplay={{
                 delay: 7000,
                 disableOnInteraction: false,
               }}
               coverflowEffect={{
-                rotate: 25,
+                rotate: 0,
                 stretch: 0,
-                depth: 120,
-                modifier: 2,
+                depth: 100,
+                modifier: 1,
                 slideShadows: false,
+                scale: 1,
               }}
               pagination={{
                 clickable: true,
               }}
-              navigation={true}
               onSlideChange={(swiper) => {
                 setActiveIndex(swiper.realIndex);
               }}

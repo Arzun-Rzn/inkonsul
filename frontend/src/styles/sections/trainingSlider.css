@@ -3,26 +3,12 @@
   background-position: center;
   background-repeat: no-repeat;
   min-height: 90vh;
-}
+  overflow: hidden;
 
-.training-slider-cards-wrapper {
-  width: 100%;
-  max-width: 620px;
-  position: relative;
-}
-
-/* Swiper container */
-.training-swiper {
-  width: 100%;
-  padding-top: 40px;
-  padding-bottom: 60px;
-}
-
-/* Each slide */
-.training-swiper-slide {
-  width: 280px;
-  display: flex;
-  justify-content: center;
+  transition:
+    background-position 1.2s ease,
+    background-size 1.2s ease,
+    background-image 0.8s ease-in-out;
 }
 
 .training-slider-overlay {
@@ -45,7 +31,6 @@
 .training-left-content {
   max-width: 580px;
   color: white;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -57,6 +42,22 @@
   text-transform: uppercase;
   opacity: 0.8;
   margin-bottom: 14px;
+}
+
+/* Smooth text animation */
+.training-text-animate {
+  animation: textSlideUp 0.7s ease;
+}
+
+@keyframes textSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .training-title {
@@ -79,21 +80,17 @@
   padding: 14px 32px;
   border-radius: 14px;
   border: 1px solid rgb(0, 0, 0);
-
   background: rgb(198, 255, 53);
   color: rgb(0, 0, 0);
-
   font-weight: 600;
   font-size: 18px;
-
   backdrop-filter: blur(10px);
-
   transition: all 0.3s ease;
   cursor: pointer;
 }
 
 .explore-button:hover {
-  transform: translateY(-2px) scale(1.1);;
+  transform: translateY(-2px) scale(1.1);
   background: #60c2ff;
 }
 
@@ -103,25 +100,55 @@
   justify-content: flex-end;
   align-items: flex-end;
   height: 100%;
+  padding-right: 0;
 }
 
 .training-slider-cards-wrapper {
-  width: 380px;
-  transform: translateY(80px);
+  width: 500px; 
+  overflow: hidden;
+  transform: translateY(80px) translateX(100px);
+  position: relative;
+}
+
+.training-swiper {
+  width: 100%;
+  padding-top: 40px;
+  padding-bottom: 60px;
+  padding-left: 0px;
 }
 
 .training-swiper-slide {
-  width: 200px !important;
+  width: 210px !important;
+  display: flex;
+  justify-content: flex-start;
+  transition: all 0.6s ease;
 }
 
-/* Card */
+/* Default small cards */
 .training-card {
-  width: 160px;
-  height: 240px;
+  width: 180px;
+  height: 280px;
   border-radius: 28px;
   overflow: hidden;
   position: relative;
   border: 2px solid rgba(255, 255, 255, 0.7);
+  transition: transform 0.6s ease, opacity 0.6s ease;
+  transform: scale(0.72);
+  opacity: 0.85;
+  will-change: transform;
+}
+
+/* Active card bigger */
+.training-swiper .swiper-slide-active .training-card {
+  transform: scale(1);
+  opacity: 1;
+  z-index: 2;
+}
+
+/* Next card right beside active and smaller */
+.training-swiper .swiper-slide-next .training-card {
+  transform: scale(0.78);
+  opacity: 0.92;
 }
 
 .training-card img {
@@ -130,7 +157,6 @@
   object-fit: cover;
 }
 
-/* Overlay */
 .training-card-overlay {
   position: absolute;
   inset: 0;
@@ -150,13 +176,13 @@
   margin: 0;
 }
 
-/* Swiper navigation buttons */
+/* No arrows */
 .swiper-button-prev,
 .swiper-button-next {
-  color: white;
+  display: none !important;
 }
 
-/* Pagination dots */
+/* Pagination */
 .swiper-pagination-bullet {
   background: rgba(255, 255, 255, 0.4);
   opacity: 1;
