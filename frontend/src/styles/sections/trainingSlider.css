@@ -1,14 +1,18 @@
 .training-slider {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.training-background-layer {
+  position: absolute;
+  inset: 0;
   background-size: 105%;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 90vh;
-  overflow: hidden;
+  z-index: 1;
 
-  transition:
-    background-position 1.2s ease,
-    background-size 1.2s ease,
-    background-image 0.8s ease-in-out;
+  animation: smoothBackgroundSwitch 1.6s ease-in-out;
 }
 
 .training-slider-overlay {
@@ -19,6 +23,18 @@
   align-items: center;
   padding: 0 6%;
   position: relative;
+  z-index: 2;
+}
+
+@keyframes smoothBackgroundSwitch {
+  from {
+    opacity: 0.92;
+    transform: scale(1.01);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .training-left-content-wrapper {

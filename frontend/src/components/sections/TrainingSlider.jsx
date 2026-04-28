@@ -53,12 +53,14 @@ function TrainingSlider() {
   const activeSlide = trainingSlides[activeIndex];
 
   return (
-    <section
-      className="training-slider"
-      style={{
-        backgroundImage: `linear-gradient(to right, rgba(0,0,0,0.85), rgba(0,0,0,0.35)), url(${activeSlide.image})`,
-      }}
-    >
+   <section className="training-slider">
+      <div
+        key={activeSlide.id}
+        className="training-background-layer"
+        style={{
+          backgroundImage: `linear-gradient(to right, rgba(0,0,0,0.85), rgba(0,0,0,0.35)), url(${activeSlide.image})`,
+        }}
+      />
       <div className="training-slider-overlay">
         {/* LEFT CONTENT */}
         <div className="training-left-content-wrapper">
