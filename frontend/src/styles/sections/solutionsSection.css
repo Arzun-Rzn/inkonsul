@@ -133,3 +133,103 @@
     padding: 40px 20px;
   }
 }
+
+/* ================= MOBILE RESPONSIVE SOLUTIONS SECTION ================= */
+
+@media (max-width: 768px) {
+  .solutions-section {
+    padding: 40px 20px;
+    margin-bottom: 30px;
+  }
+
+  .solutions-header {
+    margin: 0 0 30px 0;
+    text-align: center;
+  }
+
+  .solutions-header h2 {
+    font-size: 2rem;
+    line-height: 1.4;
+  }
+
+  .solutions-wrapper {
+    width: 100%;
+  }
+
+  .solutions-track {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 100%;
+  }
+
+  .solutions-card {
+    height: auto;
+    min-height: 340px;
+    border-radius: 16px;
+  }
+
+  .solutions-card .card-image {
+    height: 220px;
+  }
+
+  .solutions-card .card-content {
+    height: auto;
+    padding: 18px;
+  }
+
+  .solutions-card .card-content h3 {
+    font-size: 1.2rem;
+    margin-top: 5px;
+  }
+
+  .solutions-card .card-content p {
+    font-size: 0.95rem;
+    margin-bottom: 70px;
+    line-height: 1.5;
+  }
+
+  .solutions-card .arrow {
+    bottom: 20px;
+    right: 20px;
+    height: 38px;
+    width: 38px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Extra Small Devices */
+
+@media (max-width: 480px) {
+  .solutions-section {
+    padding: 30px 15px;
+  }
+
+  .solutions-header h2 {
+    font-size: 1.7rem;
+  }
+
+  .solutions-card .card-image {
+    height: 190px;
+  }
+
+  .solutions-card .card-content {
+    padding: 16px;
+  }
+
+  .solutions-card .card-content h3 {
+    font-size: 1.05rem;
+  }
+
+  .solutions-card .card-content p {
+    font-size: 0.9rem;
+    margin-bottom: 60px;
+  }
+
+  .solutions-card .arrow {
+    height: 34px;
+    width: 34px;
+    font-size: 0.85rem;
+    bottom: 18px;
+    right: 18px;
+  }
+}

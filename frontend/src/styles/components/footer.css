@@ -135,3 +135,124 @@
     gap: 20px;
   }
 }
+
+/* ================= MOBILE RESPONSIVE FOOTER ================= */
+
+@media (max-width: 768px) {
+  .footer {
+    padding-top: 50px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  .footer-brand-header {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .brand-logo {
+    width: 42px;
+    height: 42px;
+  }
+
+  .footer-brand h2 {
+    font-size: 30px;
+  }
+
+  .footer-brand p {
+    max-width: 100%;
+    font-size: 15px;
+    margin-top: 16px;
+  }
+
+  .social-icons {
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .social-icons a {
+    font-size: 24px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+  }
+
+  .footer-links div {
+    align-items: center;
+  }
+
+  .footer-links h4 {
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+
+  .footer-links a {
+    font-size: 14px;
+    margin-bottom: 6px;
+  }
+
+  .footer-contact {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .footer-contact h4 {
+    margin-bottom: 10px;
+  }
+
+  .footer-contact p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .footer-bottom {
+    margin-top: 35px;
+    padding: 14px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+}
+
+/* Extra Small Devices */
+
+@media (max-width: 480px) {
+  .footer {
+    padding-top: 40px;
+  }
+
+  .footer-brand h2 {
+    font-size: 40px;
+  }
+
+  .footer-brand p {
+    font-size: 14px;
+  }
+
+  .social-icons a {
+    font-size: 22px;
+  }
+
+  .footer-links h4 {
+    font-size: 14px;
+  }
+
+  .footer-links a {
+    font-size: 13px;
+  }
+
+  .footer-contact p {
+    font-size: 13px;
+  }
+
+  .footer-bottom {
+    font-size: 11px;
+  }
+}

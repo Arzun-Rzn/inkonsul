@@ -212,3 +212,157 @@
 .swiper-wrapper {
   transition-timing-function: ease-in-out !important;
 }
+
+/* ================= MOBILE TRAINING SLIDER ================= */
+/* Active card centered, remaining cards left & right */
+
+@media (max-width: 768px) {
+  .training-slider {
+    min-height: auto;
+    overflow: hidden;
+  }
+
+  .training-slider-overlay {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 60px 16px 30px;
+    gap: 24px;
+  }
+
+  /* Top content */
+  .training-left-content-wrapper {
+    width: 100%;
+    order: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  .training-left-content {
+    max-width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+
+  .training-title {
+    font-size: 28px;
+    line-height: 1.3;
+  }
+
+  .training-subtitle {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .explore-button {
+    font-size: 15px;
+    padding: 12px 24px;
+  }
+
+  /* Bottom cards */
+  .training-right-content {
+    width: 100%;
+    order: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 0;
+  }
+
+  .training-slider-cards-wrapper {
+    width: 100%;
+    max-width: 320px;
+    transform: none;
+    overflow: visible;
+    display: flex;
+    justify-content: center;
+  }
+
+  .training-swiper {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 40px;
+  }
+
+  /* Important for centered active slide */
+  .training-swiper-slide {
+    width: 150px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Small cards */
+  .training-card {
+    width: 125px;
+    height: 180px;
+    border-radius: 18px;
+    transform: scale(0.82);
+    opacity: 0.75;
+    transition: all 0.4s ease;
+  }
+
+  /* Active card exactly center */
+  .training-swiper .swiper-slide-active .training-card {
+    transform: scale(1);
+    opacity: 1;
+    z-index: 5;
+  }
+
+  /* Left + right cards */
+  .training-swiper .swiper-slide-prev .training-card,
+  .training-swiper .swiper-slide-next .training-card {
+    transform: scale(0.88);
+    opacity: 0.9;
+  }
+
+  .training-card-overlay {
+    padding: 14px;
+  }
+
+  .training-card-overlay h3 {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+}
+
+/* Extra small devices */
+
+@media (max-width: 480px) {
+  .training-title {
+    font-size: 24px;
+  }
+
+  .training-subtitle {
+    font-size: 13px;
+  }
+
+  .training-slider-cards-wrapper {
+    max-width: 280px;
+  }
+
+  .training-swiper-slide {
+    width: 135px !important;
+  }
+
+  .training-card {
+    width: 110px;
+    height: 160px;
+  }
+
+  .training-card-overlay h3 {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .training-background-layer {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+  }
+}

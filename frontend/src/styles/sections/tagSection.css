@@ -35,3 +35,44 @@
   font-weight: 400;
   margin-top: 40px;
 }
+
+/* ================= MOBILE RESPONSIVE TAG SECTION ================= */
+
+@media (max-width: 768px) {
+  .tag-section {
+    padding: 35px 20px;
+  }
+
+  .tag-heading {
+    flex-direction: column;
+    gap: 15px;
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+
+  .tag-subtext {
+    font-size: 20px;
+    margin-top: 25px;
+    line-height: 1.5;
+  }
+}
+
+/* Extra Small Devices */
+
+@media (max-width: 480px) {
+  .tag-section {
+    padding: 30px 15px;
+  }
+
+  .tag-heading {
+    font-size: 22px;
+    gap: 12px;
+    letter-spacing: 0.5px;
+  }
+
+  .tag-subtext {
+    font-size: 16px;
+    margin-top: 20px;
+    line-height: 1.6;
+  }
+}
