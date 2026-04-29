@@ -96,9 +96,10 @@ function TrainingSlider() {
               allowTouchMove={true}
               slideToClickedSlide={false}
               autoplay={{
-                delay: 7000,
+                delay: 5000,
                 disableOnInteraction: false,
               }}
+              speed={800}
               coverflowEffect={{
                 rotate: 0,
                 stretch: 0,

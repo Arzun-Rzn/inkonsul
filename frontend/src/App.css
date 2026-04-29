@@ -19,3 +19,27 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(156, 156, 156) transparent;
+}
+
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: white;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e5e5e5;
+}
