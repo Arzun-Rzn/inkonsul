@@ -39,7 +39,7 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
             alt="Inkonsul Logo"
             className="sidebar-logo"
           />
-          <h2 className="sidebar-title">INKONSUL TECHNOLOGIES</h2>
+          <h2 className="sidebar-title">INKONSUL</h2>
           <p className="sidebar-subtitle">
             Identify. Integrate. Implement.
           </p>
