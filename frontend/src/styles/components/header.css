@@ -248,6 +248,8 @@
   .header-container {
     position: relative;
     justify-content: center;
+    min-height: 55px;
+    padding: 0 0;
   }
 
   .logo {
