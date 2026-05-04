@@ -94,7 +94,7 @@ function TrainingSlider() {
               spaceBetween={4}
               loop={true}
               allowTouchMove={true}
-              slideToClickedSlide={false}
+              slideToClickedSlide={true}
               autoplay={{
                 delay: 5000,
                 disableOnInteraction: false,

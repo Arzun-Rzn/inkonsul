@@ -7,6 +7,15 @@
 :root {
   --bg-color: #ffffff;
   --text-color: #000000;
+  --container-padding: 34px;
+}
+
+/* Global container */
+.container {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
 }
 
 body {
@@ -42,4 +51,42 @@ a {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #e5e5e5;
+}
+
+/* RESPONSIVE SPACING SYSTEM */
+
+@media (max-width: 1024px) {
+  :root {
+    --container-padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --container-padding: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --container-padding: 12px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+
+@media (min-width: 1680px) {
+  .container {
+    max-width: 1440px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .container {
+    max-width: 1600px;
+  }
 }

@@ -176,7 +176,7 @@ const Hero = () => {
 
       <div className="hero-content">
         <h1>
-          Building Intelligent HR Platforms for
+          Building Intelligent Platforms for
           <br />
           Modern Businesses
         </h1>

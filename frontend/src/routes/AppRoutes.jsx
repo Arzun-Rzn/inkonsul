@@ -1,21 +1,21 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "../pages/Home";
 
-import Header from "../components/layout/Header";
-import Footer from "../components/layout/Footer";
+import Home from "../pages/Home";
+import Layout from "../components/layout/Layout";
 
 const AppRoutes = () => {
   return (
     <BrowserRouter>
-
-      <Header />
-
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route
+          path="/"
+          element={
+            <Layout>
+              <Home />
+            </Layout>
+          }
+        />
       </Routes>
-
-      <Footer />
-
     </BrowserRouter>
   );
 };

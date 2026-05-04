@@ -10,7 +10,7 @@ import "../../styles/components/footer.css";
 const Footer = () => {
   return (
     <footer className="footer">
-      <div className="footer-container">
+      <div className="container footer-container">
 
         {/* LEFT - Brand */}
         <div className="footer-brand">

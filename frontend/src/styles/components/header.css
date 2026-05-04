@@ -10,9 +10,8 @@
 }
 
 .header-container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 8px 0px;
+  width: 100%;
+  padding: 26px 0;
 
   display: flex;
   align-items: center;
@@ -65,7 +64,7 @@
   display: inline-flex;
   gap: 8px;
   align-items: center;
-  padding: 15px 0 15px;
+  padding: 20px 0;
   font-size: 16px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 600;
@@ -107,24 +106,19 @@
 .dropdown {
   position: absolute;
   top: 100%;
-  left: 50%;
-  transform: translateX(-40%);
-
-  background: #ffffff;
-  color: rgb(0, 0, 0);
-
-  padding: 32px 0;
+  left: 0;
   z-index: 999;
-  width: 100%;
-  max-width: 1000px;
 }
 
 /* Expertise (compact dropdown) */
 .dropdown.expertise {
   left: 0;
-  transform: translateX(-40%);
+  transform: translateX(-40px);
   width: auto;
   min-width: 250px;
+
+  background: #fff;
+  padding: 20px;
   border-radius: 10px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
@@ -132,16 +126,21 @@
 /* Training Academy (mega dropdown) */
 .dropdown.academy {
   left: 50%;
-  transform: translateX(-40%);
-  min-width: 1000px;
-  border-radius: 10px;
+  transform: translateX(calc(-50% + 80px));
+
+  width: fit-content;
+  max-width: 90vw;
+
+  background: #fff;
+  padding: 20px 20px;
+  border-radius: 12px;
+
+  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
 }
 
 /* Inner container aligned with header */
 .dropdown-inner {
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 25px;
+  width: 100%;
 }
 
 /* Expertise (2 column) */
@@ -154,8 +153,13 @@
 /* Training Academy (4 column) */
 .dropdown-grid-4 {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 5px;
+  grid-template-columns: repeat(4, max-content); /* KEY CHANGE */
+  gap: 25px; /* controlled spacing */
+  justify-content: center;
+}
+
+.dropdown-grid-4 > div {
+  width: 180px;
 }
 
 /* Section Titles */
@@ -286,11 +290,6 @@
 
   .hamburger:hover {
     transform: translateY(-50%) scale(1.05);
-  }
-
-  .header-container {
-    position: relative;
-    justify-content: center;
   }
 
   .brand {
