@@ -136,7 +136,7 @@
   .hero {
     height: auto;
     min-height: 100vh;
-    padding: 80px 20px 40px;
+    padding: 20px 15px 15px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -157,15 +157,20 @@
 
   .hero-content p {
     max-width: 100%;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.7;
     margin-bottom: 25px;
   }
 
-  .cta-btn {
-    padding: 16px 28px;
-    font-size: 16px;
-    border-radius: 20px;
+   .cta-btn {
+    display: block;        /* allows margin auto to work */
+    width: fit-content;    /* button shrinks to content */
+    max-width: none;       /* remove restriction */
+    
+    margin: 20px auto 0;   /* centers horizontally */
+
+    padding: 12px 20px;    /* now you can tweak size */
+    font-size: 20px;       /* tweak freely */
   }
 
   .hero-logo {
@@ -180,37 +185,3 @@
   }
 }
 
-/* Extra Small Devices */
-
-@media (max-width: 480px) {
-  .hero {
-    padding: 20px 15px 30px;
-  }
-
-  .hero-content h1 {
-    font-size: 28px;
-    line-height: 1.5;
-  }
-
-  .hero-content p {
-    font-size: 18px;
-    line-height: 1.6;
-  }
-
-  .cta-btn {
-    display: block;        /* allows margin auto to work */
-    width: fit-content;    /* button shrinks to content */
-    max-width: none;       /* remove restriction */
-    
-    margin: 20px auto 0;   /* centers horizontally */
-
-    padding: 12px 20px;    /* now you can tweak size */
-    font-size: 14px;       /* tweak freely */
-  }
-
-  .hero-logo {
-    width: 85%;
-    max-width: 240px;
-    margin-top: 30px;
-  }
-}
