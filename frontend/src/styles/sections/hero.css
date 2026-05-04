@@ -116,26 +116,12 @@
   transform: scale(0.98);
 }
 
-/* Right Side Logo */
-
-.hero-logo {
-  position: absolute;
-  right: -2%;
-  top: 45%;
-  transform: translateY(-50%);
-  max-width: 500px;
-  width: 40%;
-  height: auto;
-  opacity: 0.9;
-  z-index: 2;
-}
-
 /* ================= MOBILE RESPONSIVE HERO ================= */
 
 @media (max-width: 768px) {
   .hero {
     height: auto;
-    min-height: 100vh;
+    min-height: 80vh;
     padding: 20px 15px 15px;
     flex-direction: column;
     align-items: center;
@@ -171,17 +157,6 @@
 
     padding: 12px 20px;    /* now you can tweak size */
     font-size: 20px;       /* tweak freely */
-  }
-
-  .hero-logo {
-    position: relative;
-    right: auto;
-    top: auto;
-    transform: none;
-    width: 75%;
-    max-width: 280px;
-    margin-top: 40px;
-    opacity: 0.95;
   }
 }
 
