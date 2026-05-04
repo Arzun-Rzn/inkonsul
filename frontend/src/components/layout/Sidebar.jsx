@@ -11,7 +11,6 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
-      document.body.style.touchAction = "none";
     } else {
       document.body.style.overflow = "auto";
     }
