@@ -22,32 +22,32 @@ const solutions = [
 const SolutionsSection = () => {
   return (
     <section className="solutions-section">
+      
       <div className="solutions-header">
         <h2>Explore Our Solutions</h2>
       </div>
 
-      <div className="solutions-wrapper">
-        <div className="solutions-track">
-          {solutions.map((item, index) => (
-            <div className="solutions-card" key={index}>
-              
-              <div className="card-image">
-                <img src={item.img} alt={item.title} />
-              </div>
-
-              <div className="card-content">
-                <h3>{item.title}</h3>
-                <p>{item.desc}</p>
-
-                <div className="arrow">
-                  <FaArrowRight />
-                </div>
-              </div>
-
+      <div className="solutions-container">
+        {solutions.map((item, index) => (
+          <div className="solutions-card" key={index}>
+            
+            <div className="card-image">
+              <img src={item.img} alt={item.title} />
             </div>
-          ))}
-        </div>
+
+            <div className="card-content">
+              <h3>{item.title}</h3>
+              <p>{item.desc}</p>
+
+              <div className="arrow">
+                <FaArrowRight />
+              </div>
+            </div>
+
+          </div>
+        ))}
       </div>
+
     </section>
   );
 };

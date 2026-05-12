@@ -1,0 +1,88 @@
+.hr-hero {
+  background-color: #06074d;
+  padding: 70px 20px;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+}
+
+.hr-hero-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 60px;
+}
+
+/* LEFT SIDE */
+.hr-hero-left {
+  flex: 1;
+  padding-top: 0px;
+}
+
+.hr-hero-left h1 {
+  font-size: 62px;
+  line-height: 1.08;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 30px;
+  max-width: 700px;
+}
+
+.hr-hero-left p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.85);
+  max-width: 650px;
+  margin-bottom: 40px;
+}
+
+/* BUTTON */
+.enroll-btn {
+  padding: 16px 34px;
+  border: none;
+  background-color: #39d8e8;
+  color: #02124a;
+  font-size: 22px;
+  font-weight: 600;
+  border-radius: 46px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.enroll-btn:hover {
+  transform: scale(1.05);
+  background-color: #00a1af;
+  color: black;
+}
+
+/* RIGHT IMAGE */
+.hr-hero-right {
+  flex-shrink: 0;
+}
+
+.hr-hero-right img {
+  width: 380px;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .hr-hero-container {
+    flex-direction: column;
+  }
+
+  .hr-hero-left h1 {
+    font-size: 52px;
+  }
+
+  .hr-hero-left p {
+    font-size: 20px;
+  }
+
+  .hr-hero-right img {
+    width: 100%;
+    height: 500px;
+  }
+}

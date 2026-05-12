@@ -1,0 +1,53 @@
+.talent-hero-section {
+  /* Using a deep navy gradient to mimic the lighting in the image */
+  background: linear-gradient(180deg, #0a1931 0%, #050a44 100%);
+  padding: 100px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 280px; /* Adjust height as needed */
+  width: 100%;
+}
+
+.talent-hero-content {
+  max-width: 800px;
+}
+
+.talent-hero-title {
+  color: #ffffff;
+  font-size: clamp(2.5rem, 6vw, 4rem); /* Responsive font sizing */
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 24px;
+  letter-spacing: -0.02em;
+  font-family: 'Inter', sans-serif;
+}
+
+.talent-hero-subtitle {
+  color: rgba(255, 255, 255, 0.8); /* Slightly transparent white */
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-weight: 400;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Optional: Subtle overlay effect to add depth without an image */
+.talent-hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center, rgba(77, 238, 234, 0.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .talent-hero-section {
+    padding: 80px 24px;
+    min-height: 300px;
+  }
+}

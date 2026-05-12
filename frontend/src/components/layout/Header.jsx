@@ -83,14 +83,17 @@ const Header = () => {
             <span className="brand-text">INKONSUL</span>
           </Link>
 
-          <nav className="nav">
+          <nav 
+            className="nav"
+            onMouseLeave={() => setActiveDropdown(null)}
+            >
             {navItems.map((item, index) => (
               <Link
                 to="#"
                 className="nav-item"
                 key={index}
                 onMouseEnter={() => setActiveDropdown(index)}
-                onMouseLeave={() => setActiveDropdown(null)}
+                // onMouseLeave={() => setActiveDropdown(null)}
               >
                 <span className="nav-text">{item.name}</span>
 
@@ -126,7 +129,20 @@ const Header = () => {
                         <div className="dropdown-grid-4">
                           {item.content.map((section, i) => (
                             <div key={i}>
-                              <h4>{section.title}</h4>
+                              <Link
+                                to={
+                                  section.title === "Advance HR Program"
+                                    ? "/training/advance-hr-program"
+                                    : section.title === "Software Training"
+                                    ? "/training/software-training"
+                                    : section.title === "Drone Training"
+                                    ? "/training/drone-training"
+                                    : "/training/social-launchpad"
+                                }
+                                className="academy-heading-link"
+                              >
+                                <h4>{section.title}</h4>
+                              </Link>
                               {section.items.map((sub, j) => (
                                 <div key={j} className="dropdown-item">{sub}</div>
                               ))}

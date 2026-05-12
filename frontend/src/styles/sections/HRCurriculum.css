@@ -1,0 +1,239 @@
+.curriculum-container {
+  padding: 40px 20px;
+  background-color: #f7f7f7;
+}
+
+.curriculum-header {
+  max-width: 700px;
+  margin: 0 0 70px;
+  padding-left: 32px;
+  text-align: left;
+}
+
+.curriculum-header h1 {
+  font-size: 56px;
+  font-weight: 700;
+  color: #00085a;
+  margin-bottom: 20px;
+  line-height: 1.1;
+}
+
+.curriculum-header p {
+  font-size: 22px;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* GRID */
+
+.curriculum-grid {
+  width: 95%;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 44px;
+}
+
+/* MODULE CARD */
+
+.module-card {
+  background: #00075b;
+  border-radius: 14px;
+  padding: 26px;
+  min-height: 300px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  transition: transform 0.35s ease,
+              box-shadow 0.35s ease;
+}
+
+.module-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 22px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* ICON */
+
+.icon-wrapper {
+  width: 54px;
+  height: 54px;
+  border-radius: 8px;
+  background: rgba(37, 214, 220, 0.12);
+  border: 1px solid rgba(37, 214, 220, 0.2);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 26px;
+  margin-bottom: 28px;
+}
+
+/* MODULE NUMBER */
+
+.module-number {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  color: #25d6dc;
+  margin-bottom: 18px;
+}
+
+/* TITLE */
+
+.module-card h3 {
+  font-size: 26px;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+  line-height: 1.25;
+  margin-bottom: 24px;
+}
+
+/* DESCRIPTION */
+
+.module-card p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: rgb(255, 255, 255);
+}
+
+/* CTA CARD */
+
+.cta-card {
+  grid-column: span 2;  
+  background: linear-gradient(
+    135deg,
+    #25d6dc 0%,
+    #0bbfc7 100%
+  );
+
+  border-radius: 14px;
+  padding: 40px;
+  min-height: 200px;
+
+  position: relative;
+  overflow: hidden;
+
+  transition: transform 0.35s ease,
+              box-shadow 0.35s ease;
+}
+
+.cta-points {
+  margin: 20px 0 15px;
+  padding-left: 20px;
+}
+
+.cta-points li {
+  font-size: 16px;
+  line-height: 1;
+  color: rgba(0, 8, 90, 0.85);
+  margin-bottom: 5px;
+}
+
+.cta-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 22px 40px rgba(0, 0, 0, 0.12);
+}
+
+.cta-content {
+  position: relative;
+  z-index: 2;
+}
+
+.cta-card h2 {
+  font-size: 32px;
+  color: #00085a;
+  line-height: 1.25;
+  margin-bottom: 15px;
+}
+
+.cta-card p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgba(0, 8, 90, 0.8);
+  margin-bottom: 20px;
+}
+
+/* BUTTON */
+
+.download-btn {
+  border: none;
+  background: #00085a;
+  color: white;
+
+  padding: 14px 20px;
+  border-radius: 45px;
+
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  transition: transform 0.3s ease,
+              background 0.3s ease;
+}
+
+.download-btn:hover {
+  transform: scale(1.04);
+  background: #00108a;
+}
+
+.btn-icon {
+  font-size: 18px;
+}
+
+/* BACKGROUND ICON */
+
+.grad-cap-icon {
+  position: absolute;
+  right: 25px;
+  bottom: 20px;
+
+  font-size: 90px;
+  opacity: 0.12;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1200px) {
+  .curriculum-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .curriculum-container {
+    padding: 70px 0;
+  }
+
+  .curriculum-header h1 {
+    font-size: 38px;
+  }
+
+  .curriculum-header p {
+    font-size: 18px;
+  }
+
+  .curriculum-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .module-card,
+  .cta-card {
+    min-height: auto;
+    padding: 28px;
+  }
+
+  .module-card h3 {
+    font-size: 26px;
+  }
+
+  .cta-card h2 {
+    font-size: 30px;
+  }
+}
