@@ -140,6 +140,7 @@ const Header = () => {
                                     : "/training/social-launchpad"
                                 }
                                 className="academy-heading-link"
+                                onClick={() => setActiveDropdown(null)}
                               >
                                 <h4>{section.title}</h4>
                               </Link>
