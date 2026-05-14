@@ -1,0 +1,237 @@
+/* ================= OVERLAY ================= */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 5000;
+
+  background: rgba(0, 0, 0, 0.80);
+  backdrop-filter: blur(5px);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 18px;
+}
+
+
+/* ================= MODAL CARD ================= */
+
+.modal-card {
+  width: 100%;
+  max-width: 680px;
+  max-height: 90vh;
+
+  background-color: #9e9e9e;
+  padding: 30px;
+  border-radius: 30px;
+
+  color: #333;
+  text-align: center;
+
+  overflow-y: auto;
+  scrollbar-width: thin;
+
+  animation: modalFade 0.3s ease;
+}
+
+
+/* custom scrollbar */
+
+.modal-card::-webkit-scrollbar {
+  width: 6px;
+}
+
+.modal-card::-webkit-scrollbar-thumb {
+  background: #999;
+  border-radius: 20px;
+}
+
+.modal-card::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+
+/* popup animation */
+
+@keyframes modalFade {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+
+/* ================= TITLE ================= */
+
+.modal-card h2 {
+  color: #000000;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 700;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/* ================= FORM ================= */
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+
+/* inputs + dropdown */
+
+.modal-form input,
+.modal-form select {
+  width: 100%;
+  padding: 12px 25px;
+
+  border: none;
+  border-radius: 50px;
+
+  font-size: 1rem;
+  outline: none;
+
+  background-color: #ffffff;
+  color: #000000;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.modal-form select {
+  color: #888888;
+  cursor: pointer;
+
+  padding-right: 50px;
+
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+
+  background-repeat: no-repeat;
+  background-position: right 22px center;
+}
+
+
+/* placeholder color */
+
+.modal-form input::placeholder {
+  color: #717171;
+}
+
+
+/* dropdown selected text */
+
+.modal-form select {
+  color: #888888;
+  cursor: pointer;
+}
+
+
+/* dropdown option list */
+
+.modal-form select option {
+  color: #000000;
+}
+
+
+/* ================= DOUBLE ROW ================= */
+
+.modal-form-row {
+  display: flex;
+  gap: 15px;
+}
+
+
+/* ================= CHECKBOX ================= */
+
+.modal-checkbox-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+
+  text-align: left;
+  padding: 1px 5px;
+
+  font-size: 0.85rem;
+  color: #1a1a1a;
+
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.modal-checkbox-container input {
+  width: auto;
+  margin-top: 2px;
+}
+
+
+/* ================= BUTTON ================= */
+
+.modal-submit-btn {
+  background-color: #000000;
+
+  border: none;
+  border-radius: 45px;
+
+  width: fit-content;
+  align-self: center;
+
+  padding: 15px 40px;
+
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+
+.modal-submit-btn:hover {
+  background-color: #222222;
+  transform: scale(1.08);
+}
+
+
+.modal-submit-btn:active {
+  transform: scale(0.98);
+}
+
+
+/* ================= FOOTER TEXT ================= */
+
+.modal-form-footer {
+  font-size: 0.8rem;
+  color: #1a1a1a;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+  .modal-overlay {
+    padding: 15px;
+  }
+
+  .modal-card {
+    max-height: 92vh;
+    padding: 25px 18px;
+  }
+
+  .modal-form-row {
+    flex-direction: column;
+  }
+}

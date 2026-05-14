@@ -17,7 +17,7 @@ const HRInfoStrip = () => {
 
         <div className="info-box">
           <h4>MODE</h4>
-          <p>Online & Offline</p>
+          <p>Live Online & Offline learning</p>
         </div>
 
         <div className="info-box">

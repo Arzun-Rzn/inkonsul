@@ -24,7 +24,7 @@
   line-height: 1.08;
   font-weight: 700;
   color: white;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
   max-width: 700px;
 }
 
@@ -33,23 +33,24 @@
   line-height: 1.6;
   color: rgba(255,255,255,0.85);
   max-width: 650px;
-  margin-bottom: 40px;
+  margin-bottom: 80px;
 }
 
 /* BUTTON */
-.enroll-btn {
+.hr-hero-left .enroll-btn {
+  display: inline-block;
   padding: 16px 34px;
   border: none;
   background-color: #39d8e8;
   color: #02124a;
-  font-size: 22px;
+  font-size: 32px;
   font-weight: 600;
   border-radius: 46px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
 }
 
-.enroll-btn:hover {
+.hr-hero-left .enroll-btn:hover {
   transform: scale(1.05);
   background-color: #00a1af;
   color: black;

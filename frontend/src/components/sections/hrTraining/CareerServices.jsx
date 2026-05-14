@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from "react";
 import "../../../styles/sections/CareerServices.css";
+import EnquiryFormModal from "../../layout/common/EnquiryFormModal";
 
 const services = [
   {
@@ -25,6 +26,8 @@ const services = [
 ];
 
 const CareerServices = () => {
+  const [openModal, setOpenModal] = useState(false);
+
   return (
     <section className="ink-career-section">
       <div className="ink-container">
@@ -51,8 +54,17 @@ const CareerServices = () => {
         </div>
 
         <div className="ink-footer">
-          <button className="ink-explore-btn">Explore Career Support</button>
+            <button
+                  className="ink-explore-btn"
+                  onClick={() => setOpenModal(true)}
+                >
+                  Explore Career Services
+                </button>
         </div>
+        <EnquiryFormModal
+            isOpen={openModal}
+            onClose={() => setOpenModal(false)}
+       />
       </div>
     </section>
   );

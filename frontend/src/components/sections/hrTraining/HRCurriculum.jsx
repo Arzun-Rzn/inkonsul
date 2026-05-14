@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from "react";
 import "../../../styles/sections/HRCurriculum.css";
+import EnquiryFormModal from "../../layout/common/EnquiryFormModal";
 
 const modules = [
   { id: '01', title: 'Evolution and Trends in HRM', description: 'Exploring the historical shift from personnel management to strategic human capital leadership in the digital age.', icon: '📈' },
@@ -15,6 +16,8 @@ const modules = [
 ];
 
 const HRCurriculum = () => {
+  const [openModal, setOpenModal] = useState(false);
+
   return (
     <section className="curriculum-container">
       <div className="curriculum-header">
@@ -50,14 +53,20 @@ const HRCurriculum = () => {
                 <li>Industry-recognised certification</li>
                 </ul>
 
-                <button className="download-btn">
-                <span className="btn-icon">⬇</span>
-                DOWNLOAD FULL SYLLABUS
+                <button
+                  className="enroll-btnn"
+                  onClick={() => setOpenModal(true)}
+                >
+                  ENROLL NOW
                 </button>
             </div>
 
         <div className="grad-cap-icon">🎓</div>
       </div>
+       <EnquiryFormModal
+            isOpen={openModal}
+            onClose={() => setOpenModal(false)}
+       />
     </div>
     </section>
   );

@@ -6,7 +6,7 @@ const EnquirySection = () => {
     <section className="enquiry-wrapper">
       {/* Top Form Section */}
       <div className="enquiry-card">
-        <h3>Enquire Now</h3>
+        <h2>ENQUIRE NOW</h2>
         <form className="enquiry-form">
           <input type="text" placeholder="Name*" required />
           <input type="email" placeholder="Email*" required />

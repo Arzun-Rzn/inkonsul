@@ -1,12 +1,21 @@
 .talent-hero-section {
-  /* Using a deep navy gradient to mimic the lighting in the image */
-  background: linear-gradient(180deg, #0a1931 0%, #050a44 100%);
+  background:
+    linear-gradient(
+      rgba(10, 25, 49, 0.82),
+      rgba(5, 10, 68, 0.88)
+    ),
+    url("../../assets/images/hr-bg.jpeg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
   padding: 100px 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  height: 280px; /* Adjust height as needed */
+  height: 280px;
   width: 100%;
 }
 

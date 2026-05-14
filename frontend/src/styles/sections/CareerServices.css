@@ -108,14 +108,15 @@
   border: none;
   padding: 14px 32px;
   border-radius: 45px;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 500;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .ink-explore-btn:hover {
   background-color: #323b9d;
+  transform: scale(1.08);
 }
 
 /* Responsive adjustments */

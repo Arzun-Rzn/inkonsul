@@ -1,7 +1,10 @@
-import { Link } from "react-router-dom";
 import "./../../../styles/sections/hrHero.css";
+import { useState } from "react";
+import EnquiryFormModal from "../../layout/common/EnquiryFormModal";
 
 const HRHero = () => {
+  const [openModal, setOpenModal] = useState(false);
+
   return (
     <section className="hr-hero">
       <div className="container hr-hero-container">
@@ -15,9 +18,12 @@ const HRHero = () => {
             AI, payroll, compliance, and workforce transformation.
           </p>
 
-          <Link to="/enquiry" className="enroll-btn">
+          <button
+            className="enroll-btn"
+            onClick={() => setOpenModal(true)}
+          >
             Enroll Now
-          </Link>
+          </button>
         </div>
 
         <div className="hr-hero-right">
@@ -26,6 +32,11 @@ const HRHero = () => {
             alt="HR Training"
           />
         </div>
+
+        <EnquiryFormModal
+          isOpen={openModal}
+          onClose={() => setOpenModal(false)}
+        />
 
       </div>
     </section>

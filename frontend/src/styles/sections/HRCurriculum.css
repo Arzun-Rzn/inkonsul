@@ -158,33 +158,21 @@
 
 /* BUTTON */
 
-.download-btn {
+.cta-content .enroll-btnn{
+  padding: 16px 34px;
   border: none;
-  background: #00085a;
-  color: white;
-
-  padding: 14px 20px;
-  border-radius: 45px;
-
-  font-size: 15px;
+  font-size: 22px;
   font-weight: 600;
+  border-radius: 46px;
   cursor: pointer;
-
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-
-  transition: transform 0.3s ease,
-              background 0.3s ease;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  background-color: #00075b;
+  color: #ffffff;
 }
 
-.download-btn:hover {
-  transform: scale(1.04);
-  background: #00108a;
-}
-
-.btn-icon {
-  font-size: 18px;
+.cta-content .enroll-btnn:hover{
+  transform: scale(1.05);
+  background-color: #0d1893;
 }
 
 /* BACKGROUND ICON */
