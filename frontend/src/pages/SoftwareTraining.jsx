@@ -1,4 +1,4 @@
-import PlaceHolderSection from "./PlaceHolderSelection";
+import PlaceHolderSection from "./PlaceHolderSection";
 
 const SoftwareTraining = () => {
   return(

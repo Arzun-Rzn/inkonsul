@@ -1,5 +1,5 @@
 import React from 'react'
-import PlaceHolderSection from './PlaceHolderSelection'
+import PlaceHolderSection from './PlaceHolderSection'
 
 const SocialLaunchpad = () => {
   return (
