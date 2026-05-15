@@ -1,9 +1,9 @@
-import PlaceholderSection from "./PlaceHolderSelection";
+import PlaceHolderSection from "./PlaceHolderSelection";
 
 const SoftwareTraining = () => {
   return(
     <div>
-       <PlaceholderSection title="Software Training" />
+       <PlaceHolderSection title="Software Training" />
     </div>
   ) 
 };

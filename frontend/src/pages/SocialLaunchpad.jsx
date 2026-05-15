@@ -1,10 +1,10 @@
 import React from 'react'
-import PlaceholderSection from './PlaceHolderSelection'
+import PlaceHolderSection from './PlaceHolderSelection'
 
 const SocialLaunchpad = () => {
   return (
     <div>
-      <PlaceholderSection title="Social Launchpad" />
+      <PlaceHolderSection title="Social Launchpad" />
     </div>
   )
 }

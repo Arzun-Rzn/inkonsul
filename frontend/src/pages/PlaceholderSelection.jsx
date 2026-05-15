@@ -1,4 +1,4 @@
-const PlaceholderSection = ({ title }) => {
+const PlaceHolderSection = ({ title }) => {
   return (
     <section
       style={{
@@ -96,4 +96,4 @@ const PlaceholderSection = ({ title }) => {
   );
 };
 
-export default PlaceholderSection;
+export default PlaceHolderSection;
