@@ -56,7 +56,7 @@ const PlaceHolderSection = ({ title }) => {
             margin: "0 auto 30px",
           }}
         >
-          We’re building something valuable here.
+          We are building something valuable here.
           A thoughtfully designed learning experience is currently
           being crafted to deliver practical skills, industry insight,
           and future-ready expertise.
