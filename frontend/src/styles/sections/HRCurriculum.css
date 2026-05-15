@@ -303,12 +303,12 @@
 
 @media (max-width: 768px) {
   .curriculum-container {
-    padding: 70px 0;
+    padding: 70px 10px;
     overflow-x: hidden;
   }
 
   .curriculum-header h1 {
-    font-size: 38px;
+    font-size: 44px;
   }
 
   .curriculum-header p {
@@ -317,7 +317,7 @@
 
   .curriculum-grid {
     grid-template-columns: 1fr;
-    width: 80%;
+    width: 90%;
     gap: 40px;
   }
 
