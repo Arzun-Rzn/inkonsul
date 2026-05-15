@@ -304,6 +304,7 @@
 @media (max-width: 768px) {
   .curriculum-container {
     padding: 70px 0;
+    overflow-x: hidden;
   }
 
   .curriculum-header h1 {
@@ -316,10 +317,19 @@
 
   .curriculum-grid {
     grid-template-columns: 1fr;
+    width: 80%;
+    gap: 40px;
   }
 
-  .module-card,
+  .module-card {
+    width: 100%;
+    min-height: auto;
+    padding: 24px;
+  }
+
   .cta-card {
+    grid-column: span 1;
+    width: 100%;
     min-height: auto;
     padding: 28px;
   }
