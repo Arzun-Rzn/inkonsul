@@ -86,14 +86,13 @@ const Header = () => {
           <nav 
             className="nav"
             onMouseLeave={() => setActiveDropdown(null)}
-            >
+          >
             {navItems.map((item, index) => (
               <Link
                 to="#"
                 className="nav-item"
                 key={index}
                 onMouseEnter={() => setActiveDropdown(index)}
-                // onMouseLeave={() => setActiveDropdown(null)}
               >
                 <span className="nav-text">{item.name}</span>
 
@@ -129,8 +128,8 @@ const Header = () => {
                         <div className="dropdown-grid-4">
                           {item.content.map((section, i) => (
                             <div key={i}>
-                              <Link
-                                to={
+                            <Link
+                            to={
                                   section.title === "Advance HR Program"
                                     ? "/training/advance-hr-program"
                                     : section.title === "Software Training"
@@ -143,9 +142,28 @@ const Header = () => {
                                 onClick={() => setActiveDropdown(null)}
                               >
                                 <h4>{section.title}</h4>
+                            </Link>
+                            {section.items.map((sub, j) => (
+                              <Link
+                                  key={j}
+                                  to={
+                                    sub === "Talent Acquisition"
+                                      ? "/training/advance-hr-program#talent-acquisition"
+                                      : sub === "HR Operations"
+                                      ? "/training/advance-hr-program#hr-operations"
+                                      : sub === "HR Payroll"
+                                      ? "/training/advance-hr-program#hr-payroll"
+                                      : sub === "Labour Law & Compliance"
+                                      ? "/training/advance-hr-program#labour-law-compliance"
+                                      : sub === "AI in HR & Analytics"
+                                      ? "/training/advance-hr-program#ai-hr-analytics"
+                                      : "#"
+                                  }
+                                  className="dropdown-item"
+                                  onClick={() => setActiveDropdown(null)}
+                                >
+                                {sub}
                               </Link>
-                              {section.items.map((sub, j) => (
-                                <div key={j} className="dropdown-item">{sub}</div>
                               ))}
                             </div>
                           ))}

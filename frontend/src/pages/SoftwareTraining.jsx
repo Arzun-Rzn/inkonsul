@@ -1,5 +1,11 @@
+import PlaceholderSection from "./PlaceHolderSelection";
+
 const SoftwareTraining = () => {
-  return <h1>Software Training Page</h1>;
+  return(
+    <div>
+       <PlaceholderSection title="Software Training" />
+    </div>
+  ) 
 };
 
 export default SoftwareTraining;

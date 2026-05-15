@@ -10,6 +10,10 @@
   --container-padding: 34px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Global container */
 .container {
   width: 100%;
