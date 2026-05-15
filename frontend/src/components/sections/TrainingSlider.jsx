@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Autoplay, Pagination } from "swiper/modules";
-
+import { useNavigate } from "react-router-dom";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
@@ -49,7 +49,7 @@ const trainingSlides = [
 
 function TrainingSlider() {
   const [activeIndex, setActiveIndex] = useState(0);
-
+  const navigate = useNavigate();
   const activeSlide = trainingSlides[activeIndex];
 
   return (
@@ -75,7 +75,7 @@ function TrainingSlider() {
 
             <button
               className="explore-button"
-              onClick={() => (window.location.href = activeSlide.route)}
+              onClick={() => navigate(activeSlide.route)}
             >
               Explore Now
             </button>
@@ -120,6 +120,7 @@ function TrainingSlider() {
                 <SwiperSlide
                   key={slide.id}
                   className="training-swiper-slide"
+                  onClick={() => navigate(slide.route)}
                 >
                   <div className="training-card">
                     <img src={slide.image} alt={slide.title} />
